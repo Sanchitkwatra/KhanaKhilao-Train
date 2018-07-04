@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+    {% block content %}
+        {% for food in food_list %}
+            {% if food.claimed == False %}
+                {{ food.id }}
+                {{ food.train }}
+                {{ food.station }}
+                {{ food.veg }}
+                {{ food.nonveg }}
+                {{ food.claimed }}
+                {{ food.vendor }}
+                <br>
+            {% endif %}
+
+        {% endfor %}
+
+    {% endblock %}

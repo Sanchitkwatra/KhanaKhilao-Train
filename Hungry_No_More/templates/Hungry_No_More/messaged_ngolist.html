@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+    <B>List of ngos who got message: </B></br>
+    {% for ngo in ngos %}
+        {% if ngo.station == Fstation %}
+            <B> {{ ngo.id }}</B>
+            <B>{{ ngo.name }}</B>
+            </br>
+        {% endif %}
+    {% endfor %}
+
+{% endblock %}
